@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.vishalsinghcricbuzzcodelab_5.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_nav_home_to_playersDetailsFragment"
+            app:destination="@id/playersDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_addFragment"
+            app:destination="@id/addFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/playersDetailsFragment"
+        android:name="com.example.vishalsinghcricbuzzcodelab_5.ui.details.PlayersDetailsFragment"
+        android:label="fragment_players_details"
+        tools:layout="@layout/fragment_players_details" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.vishalsinghcricbuzzcodelab_5.ui.addcricketer.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favourite"
+        android:name="com.example.vishalsinghcricbuzzcodelab_5.ui.favourite.favouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_nav_favourite_to_playersDetailsFragment"
+            app:destination="@id/playersDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_batsman"
+        android:name="com.example.vishalsinghcricbuzzcodelab_5.ui.batsman.BatsmanFragment"
+        android:label="fragment_batsman"
+        tools:layout="@layout/fragment_batsman" >
+        <action
+            android:id="@+id/action_nav_batsman_to_playersDetailsFragment"
+            app:destination="@id/playersDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_bowler"
+        android:name="com.example.vishalsinghcricbuzzcodelab_5.ui.bowler.BowlerFragment"
+        android:label="fragment_bowler"
+        tools:layout="@layout/fragment_bowler" >
+        <action
+            android:id="@+id/action_nav_bowler_to_playersDetailsFragment"
+            app:destination="@id/playersDetailsFragment" />
+    </fragment>
+</navigation>
